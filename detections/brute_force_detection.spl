@@ -1,0 +1,7 @@
+index=security_lab host="auth-lab-server" status="FAILED"
+| sort 0 source_ip _time
+| streamstats window=5 count as failures_in_window min(_time) as window_start by source_ip
+| eval duration_seconds=_time-window_start
+| where failures_in_window=5 AND duration_seconds<=600
+| dedup source_ip
+| table _time source_ip failures_in_window duration_seconds

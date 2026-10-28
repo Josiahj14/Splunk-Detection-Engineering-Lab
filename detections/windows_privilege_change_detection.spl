@@ -1,0 +1,7 @@
+index=security_lab host="windows-lab-server" (event_id=4720 OR event_id=4732)
+| sort 0 target_user _time
+| eval created_at=if(event_id=4720,_time,null())
+| streamstats current=f max(created_at) as latest_creation by target_user
+| eval seconds_between=_time-latest_creation
+| where event_id=4732 AND group="Administrators" AND seconds_between>=0 AND seconds_between<=600
+| table _time actor target_user group seconds_between
