@@ -1,0 +1,8 @@
+{"timestamp":"2026-10-18T10:00:00Z","event_id":4625,"username":"alice","source_ip":"198.51.100.44","action":"logon_failed"}
+{"timestamp":"2026-10-18T10:00:30Z","event_id":4625,"username":"bob","source_ip":"198.51.100.44","action":"logon_failed"}
+{"timestamp":"2026-10-18T10:01:00Z","event_id":4625,"username":"carlos","source_ip":"198.51.100.44","action":"logon_failed"}
+{"timestamp":"2026-10-18T10:01:30Z","event_id":4625,"username":"diana","source_ip":"198.51.100.44","action":"logon_failed"}
+{"timestamp":"2026-10-18T10:02:00Z","event_id":4625,"username":"ellen","source_ip":"198.51.100.44","action":"logon_failed"}
+{"timestamp":"2026-10-18T10:04:00Z","event_id":4624,"username":"alice","source_ip":"198.51.100.44","action":"logon_success"}
+{"timestamp":"2026-10-18T10:07:00Z","event_id":4720,"actor":"lab-admin","target_user":"newadmin","action":"account_created"}
+{"timestamp":"2026-10-18T10:08:00Z","event_id":4732,"actor":"lab-admin","target_user":"newadmin","group":"Administrators","action":"member_added_to_local_group"}
